@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDermott Indonesia Batch 4 Apprenticeship</title>
+    <link rel="icon" type="image/png" href="https://connect-assets.prosple.com/cdn/ff/qNOKAu6zIlfvfAyuwMx0WEMVrBUVn29A4trJqM_vLL8/1713417848/public/styles/scale_and_crop_center_120x120/public/2024-04/logo-mcdermott-indonesia-400x400-2024.jpg?itok=wx6tn7XG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        .droplet-effect {
+            position: relative;
+        }
+        
+        .droplet-effect::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(29,78,216,0.1) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            top: -150px;
+            left: -150px;
+            animation: droplet 8s infinite ease-in-out;
+        }
+        
+        .droplet-effect:nth-child(2)::after {
+            animation-delay: 1s;
+            left: auto;
+            right: -150px;
+        }
+        
+        @keyframes droplet {
+            0%, 100% { transform: scale(0.8); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.1; }
+        }
+        
+        .dewdrop {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+            animation: dewdrop 12s infinite linear;
+        }
+        
+        @keyframes dewdrop {
+            0% { transform: translateY(0) scale(0.5); opacity: 0; }
+            20% { transform: translateY(50px) scale(0.8); opacity: 0.4; }
+            40% { transform: translateY(100px) scale(1); opacity: 0.6; }
+            60% { transform: translateY(150px) scale(0.8); opacity: 0.4; }
+            100% { transform: translateY(200px) scale(0.5); opacity: 0; }
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .department-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .profile-card:hover .department-tag {
+            background-color: #1d4ed8;
+            color: white;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        /* Random positions for dewdrops */
+        .dewdrop:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .dewdrop:nth-child(2) { left: 25%; top: 15%; animation-delay: 2s; }
+        .dewdrop:nth-child(3) { left: 75%; top: 25%; animation-delay: 4s; }
+        .dewdrop:nth-child(4) { left: 90%; top: 10%; animation-delay: 6s; }
+    </style>
+</head>
+<body>
+    <div class="relative min-h-screen overflow-hidden">
+        <!-- Background droplets -->
+        <div class="dewdrop"></div>
+        <div class="dewdrop"></div>
+        <div class="dewdrop"></div>
+        <div class="dewdrop"></div>
+        
+        <!-- Navigation Bar -->
+        <nav class="fixed w-full bg-white shadow-sm z-50">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex justify-between items-center py-4">
+                    <div>
+                        <img src="https://connect-assets.prosple.com/cdn/ff/qNOKAu6zIlfvfAyuwMx0WEMVrBUVn29A4trJqM_vLL8/1713417848/public/styles/scale_and_crop_center_120x120/public/2024-04/logo-mcdermott-indonesia-400x400-2024.jpg?itok=wx6tn7XG" alt="McDermott Indonesia Logo" class="h-10">
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                        <a href="#departments" class="text-gray-600 hover:text-blue-600 transition-colors">Departments</a>
+                        <a href="#members" class="text-gray-600 hover:text-blue-600 transition-colors">Members</a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <header class="droplet-effect relative bg-white shadow-sm pt-32 pb-8">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <img src="https://www.mendaftarkerja.com/wp-content/uploads/2024/07/IMG_5738.png" alt="McDermott Indonesia Logo" class="h-12 md:h-16" />
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 text-center md:text-right">
+                        Batch 4 Apprenticeship Program
+                    </h1>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="py-12 md:py-20 relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center">
+                    <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+                        Welcoming <span class="text-blue-600">53 Talents</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Meet the future of McDermott Indonesia Batam - our Batch 4 apprentices across various departments.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-12 bg-blue-50 relative overflow-hidden">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                        <div class="aspect-video rounded-xl shadow-lg w-full">
+                        <iframe class="w-full h-full rounded-xl"
+                            src="https://www.youtube.com/embed/B-keIwIod8s?autoplay=1&controls=1&rel=0&showinfo=0&modestbranding=1&loop=1&playlist=B-keIwIod8s"
+                            title="YouTube video"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media; fullscreen"
+                            allowfullscreen>
+                        </iframe>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">About Our Batch</h2>
+                        <div class="space-y-4 text-gray-700">
+                            <p>
+                                We are 53 talented individuals selected for McDermott Indonesia's Batch 4 Apprenticeship Program in Batam, each bringing unique skills and perspectives to the company.
+                            </p>
+                            <p>
+                                Coming from diverse educational backgrounds, we're united in our passion for excellence and commitment to learning from industry experts at McDermott.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mt-6">
+                                <div class="bg-white p-4 rounded-lg shadow-sm">
+                                    <h3 class="font-semibold text-blue-600">Start - End Date</h3>
+                                    <p class="text-gray-600">25 Jun 2024 - 25 Jun 2025</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg shadow-sm">
+                                    <h3 class="font-semibold text-blue-600">Location</h3>
+                                    <p class="text-gray-600">Batam, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Departments Section -->
+        <section id="departments" class="py-12 relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Departments</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Our batch spans across various departments, each contributing to McDermott's diverse operations.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <img src="assets/electric.png" alt="Electric Icon" class="size-8">
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Electrical & Instruments</h3>
+                        <p class="text-gray-600 text-sm">12 apprentices</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <div class="text-blue-600 mb-3">
+                            <img src="assets/scaffold.png" alt="Scaffolding Icon" class="size-8">
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Scaffolding</h3>
+                        <p class="text-gray-600 text-sm">8 apprentices</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <div class="text-blue-600 mb-3">
+                            <img src="assets/strfitt.png" alt="Structural Icon" class="size-8">
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Structural Fitting</h3>
+                        <p class="text-gray-600 text-sm">7 apprentices</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <div class="text-blue-600 mb-3">
+                            <img src="assets/paint.png" alt="Painting Icon" class="size-8">
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Blasting & Painting</h3>
+                        <p class="text-gray-600 text-sm">10 apprentices</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <div class="text-blue-600 mb-3">
+                            <img src="assets/welding.png" alt="Welding Icon" class="size-8">
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Welding</h3>
+                        <p class="text-gray-600 text-sm">5 apprentices</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <div class="text-blue-600 mb-3">
+                            <img src="assets/rigger.png" alt="Rigging Icon" class="size-8">
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Rigging</h3>
+                        <p class="text-gray-600 text-sm">4 apprentices</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors">
+                        <div class="text-blue-600 mb-3">
+                            <div class="text-blue-600 mb-3">
+                            <img src="assets/piping.png" alt="Pipefitting Icon" class="size-8">
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Pipefitting</h3>
+                        <p class="text-gray-600 text-sm">6 apprentices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mentors Section -->
+        <section id="mentors" class="py-12 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mentors</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Guiding and supporting our apprenticeship journey.
+            </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Mentor 1 -->
+            <div class="bg-blue-50 p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                <img src="https://ui-avatars.com/api/?name=Siti+Rani&background=1d4ed8&color=fff&size=100" alt="Mentor 1" class="w-24 h-24 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Siti Rani</h3>
+                <p class="text-gray-600">Trainer Lead</p>
+            </div>
+            
+            <!-- Mentor 2 -->
+            <div class="bg-blue-50 p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                <img src="https://ui-avatars.com/api/?name=Leni+Marlina&background=1d4ed8&color=fff&size=100" alt="Mentor 2" class="w-24 h-24 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Leni Marlina</h3>
+                <p class="text-gray-600">Training Coordinator</p>
+            </div>
+            
+            <!-- Mentor 3 -->
+            <div class="bg-blue-50 p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                <img src="https://ui-avatars.com/api/?name=Amellia&background=1d4ed8&color=fff&size=100" alt="Mentor 3" class="w-24 h-24 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Amellia</h3>
+                <p class="text-gray-600">Training Coordinator</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Profiles Section -->
+        <section id="members" class="py-12 bg-blue-50 relative overflow-hidden">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Meet Our Apprentices</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Each of our 53 apprentices brings unique talents and perspectives to McDermott.
+                    </p>
+                </div>
+                
+                    <!-- Search/Filters -->
+                <div class="mb-8 bg-white p-4 rounded-xl shadow-sm">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input id="searchInput" type="text" placeholder="Search apprentices..." class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    <select id="departmentFilter" class="p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-white">
+                    <option value="">All Departments</option>
+                    <option>Electrical & Instruments</option>
+                    <option>Scaffolding</option>
+                    <option>Structural Fitting</option>
+                    <option>Blasting & Painting</option>
+                    <option>Welding</option>
+                    <option>Rigging</option>
+                    <option>Pipefitting</option>
+                    </select>
+                </div>
+                </div>
+                
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="profile-grid"></div>
+  </div>
+
+    <!-- Pagination -->
+    <div class="mt-12 flex justify-center">
+      <nav class="flex items-center space-x-2" id="pagination"></nav>
+    </div>
+  </div>
+
+  <script>
+    const apprentices = [
+      { name: "Fauzan Haris", department: "Electrical & Instruments" },
+      { name: "Nikein Tri Andjani", department: "Electrical & Instruments" },
+      { name: "Dicky Andreas Panjaitan", department: "Electrical & Instruments" },
+      { name: "Lusy Anggraini", department: "Electrical & Instruments" },
+      { name: "Muhammad Rizky Romadhon", department: "Electrical & Instruments" },
+      { name: "Rusman Fernando Manurung", department: "Electrical & Instruments" },
+      { name: "Hania Putri Agnur", department: "Electrical & Instruments" },
+      { name: "Mayang Anjar Sari", department: "Electrical & Instruments" },
+      { name: "Jhonson Ferio Gunawan", department: "Electrical & Instruments" },
+      { name: "Yohannes Rionaldo A. Kaju", department: "Electrical & Instruments" },
+      { name: "Permata Sari Sihotang Debora", department: "Electrical & Instruments" },
+      { name: "Goty Febryanti Liyadha", department: "Electrical & Instruments" },
+      { name: "Aldi Zullanda Afriyeldi", department: "Scaffolding" },
+      { name: "Aditya Prastijaya Surbakti", department: "Scaffolding" },
+      { name: "Naomi Novalina", department: "Scaffolding" },
+      { name: "Afif Syahwira", department: "Scaffolding" },
+      { name: "Bernadus Steven Marselinus", department: "Scaffolding" },
+      { name: "Fajaria Rahma", department: "Scaffolding" },
+      { name: "Deni Sanjaya", department: "Scaffolding" },
+      { name: "Muhamad Niko Wan Fals", department: "Scaffolding" },
+      { name: "Hafis Syahril", department: "Structural Fitting" },
+      { name: "Muhammad Syahrudin", department: "Structural Fitting" },
+      { name: "Katarina Aini", department: "Structural Fitting" },
+      { name: "Alfan Dahnuril", department: "Structural Fitting" },
+      { name: "Grace Angel Napitupulu", department: "Structural Fitting" },
+      { name: "Zhakaria Pratama Putra", department: "Structural Fitting" },
+      { name: "Steven Rio Vinsensius Gultom", department: "Structural Fitting" },
+      { name: "Zahwa Salsabila", department: "Blasting & Painting" },
+      { name: "Fadil Ahmad Ghani", department: "Blasting & Painting" },
+      { name: "M. Rizky Hidayat", department: "Blasting & Painting" },
+      { name: "Josua Gerhad Sianipar", department: "Blasting & Painting" },
+      { name: "Ahmad Jibril Al Muwafaq", department: "Blasting & Painting" },
+      { name: "Tiara Kasih Nababan", department: "Blasting & Painting" },
+      { name: "Delon H. Pakpahan", department: "Blasting & Painting" },
+      { name: "Frans R. Sirait", department: "Blasting & Painting" },
+      { name: "Adrian Septy Maulana", department: "Blasting & Painting" },
+      { name: "Nico Zulkarnain T.", department: "Blasting & Painting" },
+      { name: "Ramadhan Adiansyah", department: "Welding" },
+      { name: "Khusnul Yakin", department: "Welding" },
+      { name: "Athaya Faiz", department: "Welding" },
+      { name: "Brenda Ramadani", department: "Welding" },
+      { name: "Cahaya Nilla", department: "Welding" },
+      { name: "Anastasya Jahroul", department: "Rigging" },
+      { name: "Nia Maysarah", department: "Rigging" },
+      { name: "M. Rizky Raffiyandra", department: "Rigging" },
+      { name: "Fayat Sakana", department: "Rigging" },
+      { name: "Irman Syah", department: "Pipefitting" },
+      { name: "M. Ibnu Sabil", department: "Pipefitting" },
+      { name: "Lilisari Dewi", department: "Pipefitting" },
+      { name: "Nasuwa Nabila", department: "Pipefitting" },
+      { name: "Purwanto", department: "Pipefitting" },
+      { name: "Al Falah", department: "Pipefitting" }
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const departmentFilter = document.getElementById("departmentFilter");
+    const container = document.getElementById("profile-grid");
+    const paginationContainer = document.getElementById("pagination");
+
+    const ITEMS_PER_PAGE = 6;
+    let currentPage = 1;
+
+    function renderProfiles(data) {
+      container.innerHTML = "";
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      const paginated = data.slice(start, start + ITEMS_PER_PAGE);
+
+      paginated.forEach(apprentice => {
+        container.innerHTML += `
+          <div class="profile-card bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300">
+            <div class="p-5">
+              <div class="flex items-center mb-4">
+                <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(apprentice.name)}&background=random" alt="${apprentice.name}" class="w-16 h-16 rounded-full mr-4 object-cover">
+                <div>
+                  <h3 class="font-bold text-gray-800">${apprentice.name}</h3>
+                  <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">${apprentice.department}</span>
+                </div>
+              </div>
+              <div class="text-gray-600 text-sm mb-4">
+                <p>Member of Batch 4 ${apprentice.department} Apprentice.</p>
+              </div>
+              <div class="flex justify-between text-sm text-blue-600">
+                <a href="#" class="hover:text-blue-800 flex items-center">Email</a>
+                <a href="#" class="hover:text-blue-800 flex items-center">Contact</a>
+                <a href="#" class="hover:text-blue-800 flex items-center">Profile</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function renderPagination(totalItems) {
+      paginationContainer.innerHTML = "";
+      const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+      const createButton = (label, page, isActive = false) => {
+        const btn = document.createElement("a");
+        btn.href = "#";
+        btn.className = `px-4 py-2 border rounded-md ${isActive ? 'bg-blue-500 text-white border-blue-500' : 'bg-white text-gray-500 border-gray-300 hover:bg-gray-50'}`;
+        btn.textContent = label;
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          currentPage = page;
+          filterProfiles();
+        });
+        return btn;
+      };
+
+      paginationContainer.appendChild(createButton("Previous", Math.max(1, currentPage - 1)));
+
+      for (let i = 1; i <= totalPages; i++) {
+        paginationContainer.appendChild(createButton(i, i, i === currentPage));
+      }
+
+      paginationContainer.appendChild(createButton("Next", Math.min(totalPages, currentPage + 1)));
+    }
+
+    function filterProfiles() {
+      const query = searchInput.value.toLowerCase();
+      const department = departmentFilter.value;
+
+      const filtered = apprentices.filter(a => {
+        const matchesName = a.name.toLowerCase().includes(query);
+        const matchesDept = !department || a.department === department;
+        return matchesName && matchesDept;
+      });
+
+      renderPagination(filtered.length);
+      renderProfiles(filtered);
+    }
+
+    searchInput.addEventListener("input", () => { currentPage = 1; filterProfiles(); });
+    departmentFilter.addEventListener("change", () => { currentPage = 1; filterProfiles(); });
+
+    filterProfiles();
+  </script>
+            </div>
+        </section>
+        
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Interested in learning more about our Batch 4 Apprenticeship Program?
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-8 md:p-12 max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">McDermott Indonesia</h3>
+                            <address class="text-gray-600 not-italic space-y-3">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Jl. Bawal No.1, Batu Merah, Kec. Batu Ampar, Kota Batam, Kepulauan Riau 29452
+                                </p>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    batamhr@mcdermott.com
+                                </p>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                    (0778) 405000
+                                </p>
+                            </address>
+                        </div>
+                        
+
+                        <!-- Quest -->
+                        <div>
+  <form id="contactForm" class="space-y-4">
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="entry.1434640872" 
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" 
+        required
+      >
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="entry.654747732" 
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" 
+        required
+      >
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+      <textarea 
+        id="message" 
+        name="entry.1941637970" 
+        rows="3" 
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" 
+        required
+      ></textarea>
+    </div>
+    <button 
+      type="submit" 
+      class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+    >
+      Send Message
+    </button>
+    <p id="statusMsg" class="text-sm mt-2"></p>
+  </form>
+                        </div>
+                            <script>
+                            const form = document.getElementById('contactForm');
+                            const statusMsg = document.getElementById('statusMsg');
+
+                            form.addEventListener('submit', async (e) => {
+                                e.preventDefault();
+                                
+                                const formData = new FormData(form);
+                                const url = "https://docs.google.com/forms/d/e/1FAIpQLScR-Q99ChOFNOZm9iuijUv3CTt6hzK1kilRsz2anCX4kubaKg/formResponse";
+
+                                try {
+                                await fetch(url, {
+                                    method: "POST",
+                                    mode: "no-cors",
+                                    body: formData
+                                });
+
+                                // Tampilkan pesan sukses
+                                statusMsg.textContent = "Message sent successfully!";
+                                statusMsg.className = "text-green-600 mt-2";
+
+                                // Bersihkan form
+                                form.reset();
+
+                                // Sembunyikan pesan setelah 10 detik
+                                setTimeout(() => {
+                                    statusMsg.textContent = "";
+                                }, 10000); // 10000 ms = 10 detik
+
+                                } catch (error) {
+                                statusMsg.textContent = "Failed to send message.";
+                                statusMsg.className = "text-red-600 mt-2";
+                                }
+                            });
+                            </script>
+                        <!-- Quest -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <img src="assets/logoptmi.jpg" alt="McDermott Indonesia Logo" class="h-12 opacity-90" />
+                    </div>
+                    <div class="text-sm text-gray-300 text-center md:text-right">
+                        <p>© 2025 McDermott Indonesia. All rights reserved.</p>
+                        <p>Batch 4 Apprenticeship Program</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dewdrop effect for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.relative.min-h-screen');
+            for (let i = 0; i < 8; i++) {
+                const dewdrop = document.createElement('div');
+                dewdrop.className = 'dewdrop';
+                
+                // Random positioning
+                const left = Math.random() * 100;
+                const top = Math.random() * 20;
+                const animationDelay = Math.random() * 12;
+                
+                dewdrop.style.left = `${left}%`;
+                dewdrop.style.top = `${top}%`;
+                dewdrop.style.animationDelay = `${animationDelay}s`;
+                
+                container.appendChild(dewdrop);
+            }
+            
+            // Simple search functionality demo
+            const searchInput = document.querySelector('input[type="text"]');
+            const profileCards = document.querySelectorAll('.profile-card');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                profileCards.forEach(card => {
+                    const name = card.querySelector('h3').textContent.toLowerCase();
+                    if (name.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
