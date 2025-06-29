@@ -145,13 +145,42 @@
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
                         <div class="aspect-video rounded-xl shadow-lg w-full">
-                        <iframe class="w-full h-full rounded-xl"
-                            src="https://www.youtube.com/embed/B-keIwIod8s?autoplay=1&controls=1&rel=0&showinfo=0&modestbranding=1&loop=1&playlist=B-keIwIod8s"
-                            title="YouTube video"
-                            frameborder="0"
-                            allow="autoplay; encrypted-media; fullscreen"
-                            allowfullscreen>
-                        </iframe>
+                        <!-- Tambahkan div ini untuk menggantikan iframe -->
+                        <div id="player" class="w-full h-full rounded-xl"></div>
+
+                        <!-- Tambahkan script di bawah -->
+                        <script>
+                            // Load YouTube IFrame API
+                            var tag = document.createElement('script');
+                            tag.src = "https://www.youtube.com/iframe_api";
+                            var firstScriptTag = document.getElementsByTagName('script')[0];
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                            var player;
+                            function onYouTubeIframeAPIReady() {
+                                player = new YT.Player('player', {
+                                    videoId: 'B-keIwIod8s',
+                                    playerVars: {
+                                        autoplay: 1,
+                                        controls: 1,
+                                        rel: 0,
+                                        showinfo: 0,
+                                        modestbranding: 1,
+                                        loop: 1,
+                                        playlist: 'B-keIwIod8s'
+                                    },
+                                    events: {
+                                        'onReady': onPlayerReady
+                                    }
+                                });
+                            }
+
+                            function onPlayerReady(event) {
+                                event.target.setVolume(50); // Volume 50%
+                                event.target.playVideo();   // Autoplay (jika autoplay gagal karena policy, pengguna perlu interaksi manual)
+                            }
+                        </script>
+
                         </div>
                     </div>
                     <div class="md:w-1/2">
